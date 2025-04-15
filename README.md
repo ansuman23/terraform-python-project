@@ -15,10 +15,11 @@ Instead of running the scraper locally, Terraform provisions a virtual machine i
 
   Configure AWS credentials:
   
-  ``bash
+  ``` bash
   aws configure
   ```
 2. Create Terraform Config (terraform/main.tf)
+   
 ```
 provider "aws" {
   region = "us-east-1"
@@ -46,8 +47,7 @@ resource "aws_instance" "scraper" {
 
 3. Deploy with Terraform
 In your terminal:
-```bash
-
+``` bash
 cd terraform/
 terraform init
 terraform apply
